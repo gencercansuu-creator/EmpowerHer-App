@@ -1,4 +1,4 @@
-EmpowerHer Platformu
+🌍EmpowerHer Platformu
 
 “Geleceğini Sen Şekillendir”
 
@@ -93,15 +93,26 @@ Lise        ██████████████████████�
 4️⃣ Başvurunu takip et
 
 
+
 🛠️ Teknoloji Yığını
-💻 Teknik Stack| Katman              | Teknoloji           |
+
+💻 Teknik Stack
+
+| Katman              | Teknoloji           |
 | ------------------- | ------------------- |
+
 | Frontend            | HTML5 + CSS3        |
+
 | Stil                | Syne & DM Sans      |
+
 | JS                  | Vanilla JavaScript  |
+
 | Grafik              | Chart.js            |
+
 | Backend (opsiyonel) | Node.js             |
+
 | API                 | UNESCO + World Bank |
+
 
 
 🎨 UI/UX Özellikleri
