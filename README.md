@@ -16,10 +16,15 @@ EmpowerHer, kız çocuklarının ve kadınların eğitim, istihdam ve sosyal hay
 📊 Kadın Okuryazarlık Oranı (Bölgesel)
 
 Kuzey Amerika & Avrupa   ████████████████████████  ~99%
+
 Doğu Asya               ██████████████████████    ~95%
+
 Latin Amerika           ███████████████████████   ~97%
+
 Güney Asya              ████████████████          ~62%
+
 Sahra Altı Afrika       █████████████             ~55%
+
 
 
 📊 Cinsiyete Göre Okuryazarlık
@@ -34,8 +39,11 @@ Sahra Altı Afrika       █████████████             ~55
 🎓 Eğitim Dışı Kız Çocukları (Kademe)
 
 İlkokul     ████████████████  ~34M
+
 Ortaokul    ████████████      ~28M
+
 Lise        ████████████████████████████  ~58M
+
 
 
 🧱 Eğitimin Önündeki Engeller
