@@ -1,0 +1,78 @@
+
+<style>
+  .flow-wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0.5rem 0; }
+  .flow-col { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px; background: var(--color-background-primary); }
+  .col-badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; }
+  .badge-purple { background: #EEEDFE; color: #3C3489; }
+  .badge-teal { background: #E1F5EE; color: #0F6E56; }
+  .badge-amber { background: #FAEEDA; color: #854F0B; }
+  @media (prefers-color-scheme: dark) {
+    .badge-purple { background: #26215C; color: #AFA9EC; }
+    .badge-teal { background: #04342C; color: #5DCAA5; }
+    .badge-amber { background: #412402; color: #FAC775; }
+  }
+  .col-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .col-sub { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 12px; }
+  .step { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .step-num { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
+  .num-purple { background: #EEEDFE; color: #3C3489; }
+  .num-teal { background: #E1F5EE; color: #0F6E56; }
+  .num-amber { background: #FAEEDA; color: #854F0B; }
+  @media (prefers-color-scheme: dark) {
+    .num-purple { background: #26215C; color: #AFA9EC; }
+    .num-teal { background: #04342C; color: #5DCAA5; }
+    .num-amber { background: #412402; color: #FAC775; }
+  }
+  .step-text { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .tech-tag { font-size: 11px; color: var(--color-text-tertiary); font-family: var(--font-mono); background: var(--color-background-secondary); padding: 2px 6px; border-radius: 4px; display: inline-block; margin: 2px 2px 0 0; }
+</style>
+
+<div class="flow-wrap">
+
+  <div class="flow-col">
+    <span class="col-badge badge-purple">Modül 1</span>
+    <div class="col-title">Burs & Hibe Arama</div>
+    <div class="col-sub">ScholarPath engine</div>
+    <div class="step"><span class="step-num num-purple">1</span><span class="step-text">Kullanıcı ülke, yaş, eğitim kademesi filtreler</span></div>
+    <div class="step"><span class="step-num num-purple">2</span><span class="step-text">Elasticsearch ile burs veritabanında anlık arama</span></div>
+    <div class="step"><span class="step-num num-purple">3</span><span class="step-text">Sonuçlar: miktar, son başvuru tarihi, şartlar</span></div>
+    <div class="step"><span class="step-num num-purple">4</span><span class="step-text">Kişisel burs listesi oluşturma & e-posta hatırlatıcı</span></div>
+    <hr class="divider">
+    <span class="tech-tag">Elasticsearch</span>
+    <span class="tech-tag">PostgreSQL</span>
+    <span class="tech-tag">UNESCO API</span>
+    <span class="tech-tag">World Bank API</span>
+  </div>
+
+  <div class="flow-col">
+    <span class="col-badge badge-teal">Modül 2</span>
+    <div class="col-title">Şeffaf Fon Dağıtımı</div>
+    <div class="col-sub">EduFund Tracker</div>
+    <div class="step"><span class="step-num num-teal">1</span><span class="step-text">Bağışçı ödeme yapar (Stripe / PayPal)</span></div>
+    <div class="step"><span class="step-num num-teal">2</span><span class="step-text">Her bağış öğrenci profiline etiketlenir</span></div>
+    <div class="step"><span class="step-num num-teal">3</span><span class="step-text">Fonun nereye gittiği canlı dashboard'da görünür</span></div>
+    <div class="step"><span class="step-num num-teal">4</span><span class="step-text">Üç ayda bir şeffaflık raporu PDF olarak yayınlanır</span></div>
+    <hr class="divider">
+    <span class="tech-tag">Stripe API</span>
+    <span class="tech-tag">Webhook</span>
+    <span class="tech-tag">Chart.js</span>
+    <span class="tech-tag">PDF export</span>
+  </div>
+
+  <div class="flow-col">
+    <span class="col-badge badge-amber">Modül 3</span>
+    <div class="col-title">Başvuru Rehberi</div>
+    <div class="col-sub">Application guide</div>
+    <div class="step"><span class="step-num num-amber">1</span><span class="step-text">Seçilen bursa göre adım adım rehber açılır</span></div>
+    <div class="step"><span class="step-num num-amber">2</span><span class="step-text">Gerekli belgeler checklist'i otomatik oluşur</span></div>
+    <div class="step"><span class="step-num num-amber">3</span><span class="step-text">Niyet mektubu şablonu indirilir (çok dilli)</span></div>
+    <div class="step"><span class="step-num num-amber">4</span><span class="step-text">Başvuru durumu takip paneli</span></div>
+    <hr class="divider">
+    <span class="tech-tag">i18n</span>
+    <span class="tech-tag">PDF templates</span>
+    <span class="tech-tag">SendGrid</span>
+    <span class="tech-tag">Cron jobs</span>
+  </div>
+
+</div>
