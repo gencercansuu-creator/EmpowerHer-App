@@ -1,0 +1,82 @@
+
+<style>
+  .barrier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0.5rem 0; }
+  .barrier-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; background: var(--color-background-primary); }
+  .barrier-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .barrier-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+  .barrier-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+  .barrier-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .barrier-stat { font-size: 11px; font-weight: 500; margin-top: 6px; padding: 3px 8px; border-radius: 4px; display: inline-block; }
+  .bg-coral { background: #FAECE7; color: #993C1D; }
+  .bg-purple { background: #EEEDFE; color: #3C3489; }
+  .bg-amber { background: #FAEEDA; color: #854F0B; }
+  .bg-blue { background: #E6F1FB; color: #185FA5; }
+  .bg-teal { background: #E1F5EE; color: #0F6E56; }
+  .bg-pink { background: #FBEAF0; color: #993556; }
+  @media (prefers-color-scheme: dark) {
+    .bg-coral { background: #4A1B0C; color: #F0997B; }
+    .bg-purple { background: #26215C; color: #AFA9EC; }
+    .bg-amber { background: #412402; color: #FAC775; }
+    .bg-blue { background: #042C53; color: #85B7EB; }
+    .bg-teal { background: #04342C; color: #5DCAA5; }
+    .bg-pink { background: #4B1528; color: #ED93B1; }
+  }
+</style>
+
+<div class="barrier-grid">
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-coral">💰</div>
+      <div class="barrier-title">Yoksulluk</div>
+    </div>
+    <div class="barrier-body">Düşük gelirli aileler okul masraflarını karşılayamıyor. Kız çocukları önce eve alınıyor, erkek kardeşler okumaya devam ediyor.</div>
+    <div class="barrier-stat bg-coral">En kritik faktör — Dünya Bankası</div>
+  </div>
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-pink">💍</div>
+      <div class="barrier-title">Erken evlilik</div>
+    </div>
+    <div class="barrier-body">Dünya genelinde 640 milyon kadın 18 yaşından önce evlendirildi. Evlilik neredeyse her zaman eğitimin sonu anlamına geliyor.</div>
+    <div class="barrier-stat bg-pink">Düşük gelirli ülkelerde kızların %33'ü 18'den önce evli</div>
+  </div>
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-purple">🏠</div>
+      <div class="barrier-title">Toplumsal cinsiyet normları</div>
+    </div>
+    <div class="barrier-body">Kız çocuklarından ev işi, kardeş bakımı ve tarım işlerinde destek bekleniyor. Eğitim "gereksiz" görülüyor.</div>
+    <div class="barrier-stat bg-purple">Aile & toplum baskısı her bölgede etkili</div>
+  </div>
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-blue">🚶</div>
+      <div class="barrier-title">Uzak okul & güvensiz yol</div>
+    </div>
+    <div class="barrier-body">Okula uzaklık ve yol güvenliği aileler için en büyük kaygılardan biri. Kırsal bölgelerde özellikle belirleyici.</div>
+    <div class="barrier-stat bg-blue">Çatışma bölgelerinde kızlar 2.5 kat daha fazla okul dışı</div>
+  </div>
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-amber">🚻</div>
+      <div class="barrier-title">Hijyen & tesis yetersizliği</div>
+    </div>
+    <div class="barrier-body">Ayrı tuvalet olmayan okullarda kız çocukları adet dönemlerinde okula gelemiyor.</div>
+    <div class="barrier-stat bg-amber">Kızlar okul günlerinin %20'sine kadarını kaybediyor</div>
+  </div>
+
+  <div class="barrier-card">
+    <div class="barrier-header">
+      <div class="barrier-icon bg-teal">📉</div>
+      <div class="barrier-title">Ekonomik borç & devlet bütçesi</div>
+    </div>
+    <div class="barrier-body">En yüksek eğitim engeliyle karşılaşan 10 ülke, eğitime harcadıklarının 4 katını borç ödemesine aktarıyor.</div>
+    <div class="barrier-stat bg-teal">WEF 2025 — yapısal bir kriz</div>
+  </div>
+
+</div>
