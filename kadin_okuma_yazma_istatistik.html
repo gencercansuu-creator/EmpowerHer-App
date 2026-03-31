@@ -1,0 +1,117 @@
+
+<style>
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1rem 0 1.5rem; }
+  .stat-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center; }
+  .stat-num { font-size: 28px; font-weight: 500; color: var(--color-text-primary); line-height: 1.2; }
+  .stat-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 4px; }
+  .accent-purple { color: #7F77DD; }
+  .accent-coral { color: #D85A30; }
+  .accent-teal { color: #1D9E75; }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin: 1.5rem 0 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+</style>
+
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-num accent-coral">739M</div>
+    <div class="stat-label">Dünyada okuma-yazma bilmeyen yetişkin</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num accent-purple">466M</div>
+    <div class="stat-label">Bunların kadın olduğu sayı (%63)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num accent-teal">119M</div>
+    <div class="stat-label">Okul dışında kız çocuğu</div>
+  </div>
+</div>
+
+<div class="section-title">Küresel yetişkin okuryazarlık oranı — cinsiyete göre</div>
+<div class="legend">
+  <span><span class="dot" style="background:#3B8BD4"></span>Erkek %90</span>
+  <span><span class="dot" style="background:#7F77DD"></span>Kadın %84</span>
+</div>
+<div style="position:relative;width:100%;height:220px;">
+  <canvas id="genderChart"></canvas>
+</div>
+
+<div class="section-title" style="margin-top:2rem;">Bölgeye göre kadın okuryazarlık oranı (%)</div>
+<div style="position:relative;width:100%;height:260px;">
+  <canvas id="regionChart"></canvas>
+</div>
+
+<div class="section-title" style="margin-top:2rem;">Okul dışı kız çocuğu dağılımı — eğitim kademesine göre</div>
+<div style="position:relative;width:100%;height:160px;">
+  <canvas id="levelChart"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+const textColor = isDark ? '#c2c0b6' : '#5F5E5A';
+
+new Chart(document.getElementById('genderChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Gelişmiş Ülkeler','Küresel Ortalama','Güney/Batı Asya','Sahra Altı Afrika'],
+    datasets: [
+      { label: 'Erkek', data: [99, 90, 75, 68], backgroundColor: '#378ADD', borderRadius: 4 },
+      { label: 'Kadın', data: [99, 84, 62, 55], backgroundColor: '#7F77DD', borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: textColor, font: { size: 12 } }, grid: { color: gridColor } },
+      y: { min: 40, max: 100, ticks: { color: textColor, font: { size: 11 }, callback: v => v+'%' }, grid: { color: gridColor } }
+    }
+  }
+});
+
+new Chart(document.getElementById('regionChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Kuzey Amerika\n& Avrupa','Doğu Asya','Latin Amerika','Orta Asya','Sahra Altı\nAfrika','Güney Asya','En Az\nGelişmiş'],
+    datasets: [{
+      label: 'Kadın okuryazarlık oranı',
+      data: [99, 97, 93, 99, 55, 62, 48],
+      backgroundColor: ['#1D9E75','#1D9E75','#EF9F27','#EF9F27','#D85A30','#D85A30','#D85A30'],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { min: 0, max: 100, ticks: { color: textColor, font: { size: 11 }, callback: v => v+'%' }, grid: { color: gridColor } },
+      y: { ticks: { color: textColor, font: { size: 12 } }, grid: { display: false } }
+    }
+  }
+});
+
+new Chart(document.getElementById('levelChart'), {
+  type: 'bar',
+  data: {
+    labels: ['İlkokul (34M)','Ortaokul (28M)','Lise (58M)'],
+    datasets: [{
+      data: [34, 28, 58],
+      backgroundColor: ['#5DCAA5','#7F77DD','#D85A30'],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: textColor, font: { size: 11 }, callback: v => v+'M' }, grid: { color: gridColor } },
+      y: { ticks: { color: textColor, font: { size: 12 } }, grid: { display: false } }
+    }
+  }
+});
+</script>
