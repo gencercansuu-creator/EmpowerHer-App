@@ -183,4 +183,4 @@ EduReach Global — Güçlü Kadın, Güçlü Dünya 🌸
 ### Yerel Kullanım
 bash
 
-
+https://empower-her-app-eight.vercel.app/
